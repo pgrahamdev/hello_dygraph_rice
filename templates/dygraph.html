@@ -1,0 +1,24 @@
+<html>
+<head>
+<script type="text/javascript" src="/assets/dygraph.js"></script>
+<link rel="stylesheet" type="text/css" href="/assets/dygraph.css" />
+</head>
+<body>
+<div id="graphdiv"></div>
+<script type="text/javascript">
+    var data = {{.}}
+  g = new Dygraph(
+
+    // containing div
+    document.getElementById("graphdiv"),
+
+    // CSV or path to a CSV file.
+    data, {
+      legend: 'always',
+      title: 'Predicted Temperatures',
+      ylabel: 'Temperatures (F)'
+    }
+  );
+</script>
+</body>
+</html>
